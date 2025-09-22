@@ -1,6 +1,6 @@
 # NoteApp 📝
 
-A modern, full-stack Note Application that allows users to create, organize, and manage their personal notes securely. Built with a robust MERN stack and styled for a clean, intuitive user experience.
+A modern, full-stack Note Application that allows users to create, organize, and manage their personal notes securely. Built with **React Native** and **Appwrite** for a clean, intuitive user experience on mobile devices.
 
 -----
 
@@ -10,8 +10,8 @@ This application includes key functionalities to provide a seamless note-taking 
 
   * **User Authentication**: Secure user registration and login to ensure private notes for each user. 🔒
   * **CRUD Operations**: Users can **C**reate ✍️, **R**ead 📖, **U**pdate ✏️, and **D**elete 🗑️ notes, with real-time feedback.
-  * **Persistent Storage**: Notes are stored in a **MongoDB** database 💾, allowing users to access their content from anywhere.
-  * **Responsive Design**: The app provides a fluid and responsive interface that looks and functions great on any device, from desktop 💻 to mobile 📱.
+  * **Offline Support**: Notes are stored locally and synced to the cloud when online, allowing for seamless use on the go.
+  * **Mobile-First Design**: The app provides a fluid and responsive interface that is optimized for mobile devices. 📱
 
 -----
 
@@ -19,10 +19,9 @@ This application includes key functionalities to provide a seamless note-taking 
 
 This project is powered by a modern, industry-standard technology stack:
 
-  * **Frontend**: **React** ⚛️ for building a dynamic and component-based user interface.
-  * **Backend**: **Express.js** ⚡️ for creating a scalable and efficient **RESTful API**.
-  * **Database**: **MongoDB** 🍃 for flexible and powerful NoSQL data storage.
-  * **Styling**: **Tailwind CSS** 💨 for rapid and utility-first UI development.
+  * **Frontend**: **React Native** ⚛️ for building a dynamic and cross-platform mobile application.
+  * **Backend**: **Appwrite** 🚀 for a self-hosted backend-as-a-service solution, providing the authentication, database, and storage APIs.
+  * **Styling**: **Tailwind CSS** 💨 for rapid and utility-first UI development on React Native.
 
 -----
 
@@ -32,36 +31,38 @@ Follow these steps to get a local copy of the project up and running on your mac
 
 ### Prerequisites ⚙️
 
-You will need **Node.js** and **npm** installed on your computer.
+You will need **Node.js**, **npm**, and a **React Native development environment** installed.
 
 ### Installation ⬇️
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/your-repo.git
+    git clone https://github.com/yamneg96/ReactNative-NoteApp.git
     cd your-repo
     ```
-2.  **Install backend dependencies:**
+2.  **Install dependencies:**
     ```bash
     npm install
     ```
-3.  **Install frontend dependencies:**
-    ```bash
-    cd client
-    npm install
-    ```
-4.  **Create a `.env` file** 📄 in the project's root directory and add your MongoDB connection string and any other necessary variables.
+3.  **Set up Appwrite:**
+      * Create a new project in your Appwrite console.
+      * Create a `.env` file in the project's root directory.
+      * Add your Appwrite project ID and API endpoint to the `.env` file.
 
 ### Running the App 🏃‍♂️
 
-1.  **Start the backend server:**
+1.  **Start the metro bundler:**
     ```bash
-    npm start
+    npx react-native start
     ```
-2.  **Start the frontend development server:**
-    ```bash
-    cd client
-    npm start
-    ```
+2.  **Run the app on a device or emulator:**
+      * For Android:
+        ```bash
+        npx react-native run-android
+        ```
+      * For iOS:
+        ```bash
+        npx react-native run-ios
+        ```
 
-The application should now be running on `http://localhost:3000`. 🎉
+The application should now be running on your chosen device or emulator. 🎉
